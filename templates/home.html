@@ -12,7 +12,9 @@
           <p class="card-text">{{i.description|truncatewords:20}}</p>
           <div>
             {% for j in i.categories.all %}
-            <span class="text-white bg-info px-2 py-1 rounded m-1">
+            <span
+              class="text-white bg-info px-2 py-1 rounded m-1 d-inline-block"
+            >
               {{j.category_name}}
             </span>
             {% endfor %}
