@@ -10,6 +10,13 @@
         <div class="card-body text-success">
           <h5 class="card-title text-capitalize">{{i.title}}</h5>
           <p class="card-text">{{i.description|truncatewords:20}}</p>
+          <div>
+            {% for j in i.categories.all %}
+            <span class="text-white bg-info px-2 py-1 rounded m-1">
+              {{j.category_name}}
+            </span>
+            {% endfor %}
+          </div>
         </div>
         {% if i.isCompleted %}
         <div
